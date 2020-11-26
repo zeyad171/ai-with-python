@@ -1,0 +1,16 @@
+...
+   dognames_dic = dict()
+
+    with open(dogfile, "r") as infile:
+      line = infile.readline()    
+      while line != "":   
+          line = line.rstrip()
+          if line not in dognames_dic:
+            dognames_dic[line] = 1
+          else:
+            print("**Warning: Duplicate dognames", line)          
+          line = infile.readline()  
+        
+    for key in results_dic:
+        print(results_dic[key])
+        ...
